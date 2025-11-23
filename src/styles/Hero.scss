@@ -1,0 +1,70 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/assets/images/church-placeholder.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transition: transform 0.1s linear;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+
+    h1 {
+      font-size: 2.5rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 1);
+        color: #0077cc;
+      }
+    }
+  }
+}
+
+// Мобильная версия — без параллакса
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+
+    .hero-bg {
+      transform: none !important;
+    }
+
+    .hero-content h1 {
+      font-size: 1.5rem;
+    }
+
+    .hero-content button {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.about {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0077cc;
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    img {
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      }
+    }
+  }
+}
